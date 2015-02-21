@@ -1,0 +1,11 @@
+(define (ordinals n)
+  (cond
+    ((and (= (remainder n 10) 1) (not (= n 11)))
+    (string-append (number->string n) "st"))
+    ((and (= (remainder n 10) 2) (not (= n 12)))
+    (string-append (number->string n) "nd"))
+    ((and (= (remainder n 10) 3) (not (= n 13)))
+    (string-append (number->string n) "d"))
+    (else (string-append (number->string n) "th"))
+  )
+)

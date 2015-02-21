@@ -1,0 +1,13 @@
+(define (inc x) (+ x 1))
+(define (dec x) (- x 1))
+(define (square x) (* x x))
+(define (id x) x)
+
+(define (min-of f g)
+  (lambda (x)
+    (if (< (f x) (g x))
+        (f x)
+        (g x)
+    )
+  )
+)

@@ -1,0 +1,8 @@
+(define (nth index list)
+  (define (iter counter l)
+    (if (= index counter) 
+        (car l)
+        (iter (+ counter 1) (cdr l))
+    )
+  )
+  (iter 0 list))
